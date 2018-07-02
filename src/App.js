@@ -12,27 +12,36 @@ class App extends Component {
     return (
       <div className="App">
 
+      <div className='container'>
         <div className='image-cover-row'>
           <div className='image-cover-row-item'>
             <img src={blackMirror}  alt='' />
+            <div class="overlay">Black Mirror</div>
           </div>
           <div className='image-cover-row-item'>
             <img src={breakingBad}  alt='' />
+            <div class="overlay">Breaking Bad</div>
           </div>
           <div className='image-cover-row-item'>
             <img src={deathNote} alt='' />
+            <div class="overlay">Death Note</div>
           </div>
         </div>
-
+        </div>
+        <div className='container'>
         <div className='image-cover-row'>
           <div className='image-cover-row-item'>
             <img src={gameOfTHrones}  alt='' />
+            <div class="overlay">Game Of Thrones</div>
           </div>
           <div className='image-cover-row-item'>
             <img src={theWalkingDead}  alt='' />
+            <div class="overlay">The Walking Dead</div>
             </div>
           <div className='image-cover-row-item'>
             <img src={theWire} alt='' />
+            <div class="overlay">The Wire</div>
+          </div>
           </div>
           </div>
       </div>
