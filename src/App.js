@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
-import Logo from './oceans13.JPG';
+import blackMirror from './covers/blackMirror.jpg';
+import breakingBad from './covers/breakingBad.jpg';
+import deathNote from './covers/deathNote.jpg';
+import gameOfTHrones from './covers/gameofthrones.jpg';
+import theWalkingDead from './covers/thewalkingdead.jpg';
+import theWire from './covers/thewire.jpg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={Logo} className="image-cover" alt="logo" />
-          <h1 className="App-title">Welcome to Aarons Kodflix</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <div className='image-cover-row'>
+          <div className='image-cover-row-item'>
+            <img src={blackMirror}  alt='' />
+          </div>
+          <div className='image-cover-row-item'>
+            <img src={breakingBad}  alt='' />
+          </div>
+          <div className='image-cover-row-item'>
+            <img src={deathNote} alt='' />
+          </div>
+        </div>
+
+        <div className='image-cover-row'>
+          <div className='image-cover-row-item'>
+            <img src={gameOfTHrones}  alt='' />
+          </div>
+          <div className='image-cover-row-item'>
+            <img src={theWalkingDead}  alt='' />
+            </div>
+          <div className='image-cover-row-item'>
+            <img src={theWire} alt='' />
+          </div>
+          </div>
       </div>
     );
   }

@@ -1,6 +1,17 @@
 .App {
   text-align: center;
 }
-.image-cover {
+.image-cover-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-cover-row-item {
+  flex: 1;
+  flex-basis: 100%;
+}
+
+.image-cover-row-item img {
+  height: 100%;
   width: 100%;
-  } 
+}
