@@ -37,11 +37,12 @@
 .overlay {
   position: absolute; 
   bottom: 0; 
+  height: 0px;
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   color: #f1f1f1; 
   width: 100%;
-  transition: .5s ease;
+  transition: height 0.3s linear;
   opacity:0;
   color: white;
   font-size: 20px;
@@ -51,4 +52,5 @@
 
 .image-cover-row-item:hover .overlay {
   opacity: 1;
+  height: 100px;
 }
