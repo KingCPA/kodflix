@@ -6,6 +6,7 @@ import gameOfTHrones from './covers/gameofthrones.jpg';
 import theWalkingDead from './covers/thewalkingdead.jpg';
 import theWire from './covers/thewire.jpg';
 import './App.css';
+import Cover from './Cover.js';
 
 class App extends Component {
   render() {
@@ -14,37 +15,20 @@ class App extends Component {
 
       <div className='container'>
         <div className='image-cover-row'>
-          <div className='image-cover-row-item'>
-            <img src={blackMirror}  alt='' />
-            <div class="overlay">Black Mirror</div>
-          </div>
-          <div className='image-cover-row-item'>
-            <img src={breakingBad}  alt='' />
-            <div class="overlay">Breaking Bad</div>
-          </div>
-          <div className='image-cover-row-item'>
-            <img src={deathNote} alt='' />
-            <div class="overlay">Death Note</div>
-          </div>
+          <Cover title="Black Mirror" image={blackMirror} />
+          <Cover title="Breaking Bad" image={breakingBad}/>
+          <Cover title="Death Note" image={deathNote}/>
         </div>
         </div>
         <div className='container'>
         <div className='image-cover-row'>
-          <div className='image-cover-row-item'>
-            <img src={gameOfTHrones}  alt='' />
-            <div class="overlay">Game Of Thrones</div>
-          </div>
-          <div className='image-cover-row-item'>
-            <img src={theWalkingDead}  alt='' />
-            <div class="overlay">The Walking Dead</div>
-            </div>
-          <div className='image-cover-row-item'>
-            <img src={theWire} alt='' />
-            <div class="overlay">The Wire</div>
-          </div>
-          </div>
-          </div>
+        <Cover title="Game of Thrones" image={gameOfTHrones} />
+        <Cover title="The Walking Dead" image={theWalkingDead}/>
+        <Cover title="The Wire" image={theWire}/>
       </div>
+      </div>
+      </div>
+    
     );
   }
 }
