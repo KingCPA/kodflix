@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 
 class Cover extends React.Component {
   render() {
-    return(
+    return (
 
-          <Link className='image-cover-row-item' to="/Details">
-            <img src={this.props.image}  alt='' />
-            <div class="overlay">{this.props.title}</div></Link>
-          
+      <Link className='image-cover-row-item' to={this.props.id}>
+        <img src={this.props.image} alt='' />
+        <div class="overlay">{this.props.title}</div>
+      </Link>
+
     );
   }
 }
