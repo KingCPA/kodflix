@@ -16,10 +16,6 @@ class Gallery extends Component {
                         <Cover title="Black Mirror" image={blackMirror} id="Black-Mirror"/>
                         <Cover title="Breaking Bad" image={breakingBad} id="Breaking-Bad" />
                         <Cover title="Death Note" image={deathNote} id="Death-Note"/>
-                    </div>
-                </div>
-                <div className='container'>
-                    <div className='image-cover-row'>
                         <Cover title="Game of Thrones" image={gameOfTHrones} id="Game-of-thrones" />
                         <Cover title="The Walking Dead" image={theWalkingDead} id="The-walking-dead" />
                         <Cover title="The Wire" image={theWire} id="The-wire"/>

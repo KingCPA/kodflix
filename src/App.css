@@ -4,11 +4,13 @@
 .image-cover-row {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 
 .image-cover-row-item {
   flex: 1;
-  flex-basis: 100%;
+  flex-basis: 400px;
   position: relative;
 }
 
@@ -16,13 +18,7 @@
   height: 100%;
   width: 100%;
 }
-@media only screen and (max-width: 600px) {
-  .image-cover-row {
-    display: block;
-    flex-direction: column;
-    flex-basis: 100%;
-  }
-}
+
 .container {
   position: relative;
   width: 100%;
