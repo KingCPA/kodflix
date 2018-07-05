@@ -9,7 +9,7 @@
 }
 
 .image-cover-row-item {
-  flex: 1;
+  flex: 1 1;
   flex-basis: 400px;
   position: relative;
 }
@@ -20,8 +20,9 @@
 }
 
 .container {
-  position: relative;
-  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .image {
