@@ -7,8 +7,8 @@ class Gallery extends Component {
         return (
             <div className='container'>
                 {
-                    tvShow.map(show => <Cover key={show.id} id={show.id} image={show.image} title={show.title} />)
-                }
+                    tvShow.map(show => <Cover key={show.id} id={show.id} image={show.image} title={show.title} />
+                    )}
             </div>
         );
     }

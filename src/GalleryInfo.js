@@ -6,7 +6,6 @@ import theWalkingDead from './covers/thewalkingdead.jpg';
 import theWire from './covers/thewire.jpg';
 
 let tvShow = [
-
     {
         title: 'black Mirror',
         image: blackMirror,

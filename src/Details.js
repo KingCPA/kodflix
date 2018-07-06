@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import tvShow from './GalleryInfo';
 import Cover from './Cover';
 
 class Details extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super()
 
     this.state = {
       show: {},
+      redirect: false
     }
   }
 
@@ -16,15 +17,24 @@ class Details extends Component {
     var show = tvShow.find(show => {
       return show.id === this.props.match.params.name;
     });
-    this.setState({ show: show });
+    if(!show) {
+     this.setState({redirect: true});
+    } else {
+      this.setState({ show: show });
+    }
   }
+
 
 
   render() {
     let show = this.state.show;
-    if(!show.id) {
-      return <div>Loading...</div>;
+    if(this.state.redirect === true) {
+      return <Redirect to='/not-found' />
     }
+    if(!show.id) {
+      return <div>Loading...</div>
+    }
+    
     return (
       <div className='Details'>
         <h2>{show.title}</h2>

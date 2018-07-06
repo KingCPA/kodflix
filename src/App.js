@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Gallery from './Gallery';
 import Details from './Details';
-import { BrowserRouter as Router, Route, } from 'react-router-dom';
+import BadUrl from './NotFound';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 
@@ -13,8 +14,11 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-            <Route exact path="/" component={Gallery} />
-            <Route path="/:name" component={Details} />
+            <Switch>
+              <Route exact={true} path="/" component={Gallery} />
+              <Route path="/not-found" component={BadUrl} />
+              <Route path="/:name" component={Details} />
+            </Switch>
           </div>
         </Router>
       </div>
