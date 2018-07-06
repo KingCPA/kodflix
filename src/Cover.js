@@ -7,7 +7,7 @@ class Cover extends React.Component {
 
       <Link className='image-cover-row-item' to={this.props.id}>
         <img src={this.props.image} alt='' />
-        <div class="overlay">{this.props.title}</div>
+        <div className="overlay">{this.props.title}</div>
       </Link>
 
     );
