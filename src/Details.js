@@ -17,8 +17,8 @@ class Details extends Component {
     var show = tvShow.find(show => {
       return show.id === this.props.match.params.name;
     });
-    if(!show) {
-     this.setState({redirect: true});
+    if (!show) {
+      this.setState({ redirect: true });
     } else {
       this.setState({ show: show });
     }
@@ -28,17 +28,20 @@ class Details extends Component {
 
   render() {
     let show = this.state.show;
-    if(this.state.redirect === true) {
+    if (this.state.redirect === true) {
       return <Redirect to='/not-found' />
     }
-    if(!show.id) {
+    if (!show.id) {
       return <div>Loading...</div>
     }
-    
+
     return (
       <div className='Details'>
         <h2>{show.title}</h2>
-        <Cover key={show.id} id={show.id} image={show.image} title={show.title} />
+        <div className='change'>
+          <p className='synopsis'>{show.synopsis}</p>
+          <Cover key={show.id} id={show.id} image={show.image} title={show.title} />
+        </div>
         <Link to="/"><button>Home</button></Link>
       </div>
     );

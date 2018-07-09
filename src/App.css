@@ -51,3 +51,27 @@
   opacity: 1;
   height: 100px;
 }
+ 
+@media screen and (min-width: 640px) {
+  .image-cover-row-item {display: block;}
+
+}
+body {
+  background-color: cyan;
+font-family: monospace;
+}
+
+.Details {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+}
+.Details .change {
+  display: flex;
+}
+.Details .synopsis {
+  flex: 2;
+}
+.Details .image-cover-row-item {
+  flex: 1;
+}
