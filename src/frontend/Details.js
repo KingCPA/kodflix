@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import tvShow from './GalleryInfo';
-import Cover from './Cover';
+import Cover from '../frontend/Cover';
 
 class Details extends Component {
   constructor() {
