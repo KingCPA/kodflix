@@ -4,5 +4,4 @@ let shows = require('./shows');
 
 app.get('/rest/shows', (req, res) => res.send(shows));
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
-app.listen(3001, () => console.log('Example app listening on port 3001!'))
+app.listen(3001, () => console.log('Example app listening on port 3001!'));
