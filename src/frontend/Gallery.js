@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cover from './Cover.js';
-import tvShow from './GalleryInfo';
+
 
 class Gallery extends Component {
     constructor() {
@@ -13,9 +13,7 @@ class Gallery extends Component {
     componentDidMount() {
         fetch('/rest/shows')
             .then(response => response.json())
-            .then(shows => console.log( shows) );
-
-        this.setState({TvShow: tvShow})
+            .then(shows => this.setState({ TvShow: shows }))
     }
 
 
@@ -23,7 +21,7 @@ class Gallery extends Component {
         let shows = this.state.TvShow
         if (!shows) {
             return <div>Loading...</div>
-          }
+        }
         return (
             <div className='container'>
                 {

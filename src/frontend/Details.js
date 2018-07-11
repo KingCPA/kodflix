@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import tvShow from './GalleryInfo';
-import Cover from '../frontend/Cover';
+import Cover from './Cover';
 
 class Details extends Component {
   constructor() {
@@ -14,14 +13,21 @@ class Details extends Component {
   }
 
   componentDidMount() {
-    var show = tvShow.find(show => {
-      return show.id === this.props.match.params.name;
-    });
-    if (!show) {
-      this.setState({ redirect: true });
-    } else {
-      this.setState({ show: show });
-    }
+
+    fetch('/rest/shows')
+      .then(response => response.json())
+      .then(shows => {
+        console.log(shows);
+    
+        const name = this.props.match.params.name;
+        const show = shows.find((show) => show.id === name);
+
+        if (!show) {
+          this.setState({ redirect: true });
+        } else {
+          this.setState({ show: show });
+        }
+      });
   }
 
 
