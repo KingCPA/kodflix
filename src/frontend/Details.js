@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import Cover from './Cover';
+import Loading from './loading/loading';
+
 
 class Details extends Component {
   constructor() {
@@ -17,8 +19,7 @@ class Details extends Component {
     fetch('/rest/shows')
       .then(response => response.json())
       .then(shows => {
-        console.log(shows);
-    
+
         const name = this.props.match.params.name;
         const show = shows.find((show) => show.id === name);
 
@@ -38,10 +39,11 @@ class Details extends Component {
       return <Redirect to='/not-found' />
     }
     if (!show.id) {
-      return <div>Loading...</div>
+      return <div><Loading /></div>
     }
 
     return (
+
       <div className='Details'>
         <h2>{show.title}</h2>
         <div className='change'>

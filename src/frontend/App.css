@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.App > * {
+  height: 100%;
+}
 .image-cover-row {
   display: flex;
   justify-content: space-around;
