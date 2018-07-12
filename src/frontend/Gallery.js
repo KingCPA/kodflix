@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Cover from './Cover.js';
+import Loading from './loading/loading';
 
 
 class Gallery extends Component {
@@ -20,7 +21,7 @@ class Gallery extends Component {
     render() {
         let shows = this.state.TvShow
         if (!shows) {
-            return <div>Loading...</div>
+            return <div><Loading /></div>
         }
         return (
             <div className='container'>
