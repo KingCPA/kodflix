@@ -39,9 +39,7 @@ class Details extends Component {
       return <Redirect to='/not-found' />
     }
     if (!show.id) {
-      return <div>
-        <Loading />
-      </div>
+      return <div><Loading /></div>
     }
 
     return (
