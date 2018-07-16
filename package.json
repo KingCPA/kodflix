@@ -19,7 +19,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-backend": "nodemon src/backend/app.js",
-    "start-db": "mongodb"
+    "start-db": "mongod"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.3"
