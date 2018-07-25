@@ -1,5 +1,6 @@
 let MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/";
+require('dotenv').config();
+const url =process.env[`DB_URL_${process.env.NODE_ENV}`];
 
 function connect() {
     return new Promise((resolve, reject) => {
